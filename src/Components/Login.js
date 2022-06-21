@@ -8,6 +8,7 @@ export const Login= () =>{
     isLogged : false,
   });
 
+  const isDisabled = loginData.username === "" || loginData.password === ""? true: false ;
   const handleChange = (event) =>{
     const {name, value} = event.target;
         setLoginData((prevData)=>{
@@ -60,7 +61,7 @@ export const Login= () =>{
             />
             <button 
               className="btn"
-              disabled={loginData.username === "" || loginData.password === ""? true: false} 
+              disabled={isDisabled} 
               id="login-button"
             > 
               Login
