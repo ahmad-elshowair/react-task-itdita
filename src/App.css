@@ -13,8 +13,8 @@
   gap: 30px;
 }
 .logo--box{
-  width: 20%;
-  height: 20%; 
+  width: 5%;
+  height: 10%; 
 }
 
 .login--logo{
@@ -24,9 +24,10 @@
 .login--form{
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 40px;
-  width: 60%;
-  padding: 20px;
+  width: 25%;
+  padding: 40px 20px;
   border-radius: 10px;
   box-shadow: 2px 7px 20px 11px #eee;
 }
@@ -34,6 +35,7 @@
 .login--input{
   text-indent: 10px;
   height: 40px;
+  width: 100%;
   border-radius: 5px;
   border: none;
   outline: none;
@@ -41,22 +43,28 @@
 }
 
 .btn{
-  color: #fff;
+  color: rgb(59, 80, 199);
   font-size: 18px;
   height: 40px;
-  border: 1px solid transparent;
+  width: 50%;
+  border: 1px solid rgb(59, 80, 199);
   border-radius: 5px;
   font-weight: 700;
   cursor: pointer;
-  background-color: rgb(59, 80, 199);
+  background-color: transparent;
   transition: all ease-in-out .7s;
 }
 
-/* .btn:hover{
-  background-image: linear-gradient(to right,#4D5B9E, #8593dd);
-} */
+.btn:hover:not([disabled]){
+  background-color: rgb(59, 80, 199);
+  border-color: rgba(59, 80, 199, 0);
+  color: rgb(255, 255, 255);
+  transform: translateY(10px);
+}
 
 .btn:disabled{
   cursor: not-allowed;
   background-color: #eee;
+  color: #0000005c;
+  border-color: transparent;
 }
